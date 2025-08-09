@@ -13,10 +13,18 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/channel/proprietary/vendor/etc/acdbdata/common/Hdmi_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/common/Hdmi_cal.acdb \
     vendor/motorola/channel/proprietary/vendor/etc/acdbdata/common/Headset_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/common/Headset_cal.acdb \
     vendor/motorola/channel/proprietary/vendor/etc/acdbdata/common/Speaker_cal.acdb:$(TARGET_COPY_OUT_VENDOR)/etc/acdbdata/common/Speaker_cal.acdb \
+    vendor/motorola/channel/proprietary/vendor/etc/camera/camera_config.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/camera_config.xml \
+    vendor/motorola/channel/proprietary/vendor/etc/camera/mot_s5k3l6_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/mot_s5k3l6_chromatix.xml \
+    vendor/motorola/channel/proprietary/vendor/etc/camera/s5k4h7_channel_chromatix.xml:$(TARGET_COPY_OUT_VENDOR)/etc/camera/s5k4h7_channel_chromatix.xml \
     vendor/motorola/channel/proprietary/vendor/etc/init/android.hardware.biometrics.fingerprint@2.1-service-channel.rc:$(TARGET_COPY_OUT_VENDOR)/etc/init/android.hardware.biometrics.fingerprint@2.1-service-channel.rc \
     vendor/motorola/channel/proprietary/vendor/etc/qdcm_calib_data_mipi_mot_vid_djn_hd_568.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_vid_djn_hd_568.xml \
     vendor/motorola/channel/proprietary/vendor/etc/qdcm_calib_data_mipi_mot_vid_djn_hd_569.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_vid_djn_hd_569.xml \
     vendor/motorola/channel/proprietary/vendor/etc/qdcm_calib_data_mipi_mot_vid_dsbj_hd_570.xml:$(TARGET_COPY_OUT_VENDOR)/etc/qdcm_calib_data_mipi_mot_vid_dsbj_hd_570.xml \
+    vendor/motorola/channel/proprietary/vendor/etc/sensors/hals.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/hals.conf \
+    vendor/motorola/channel/proprietary/vendor/etc/sensors/sensor_def_qcomdev.conf:$(TARGET_COPY_OUT_VENDOR)/etc/sensors/sensor_def_qcomdev.conf \
+    vendor/motorola/channel/proprietary/vendor/etc/thermal-engine-channel-NA_TMO.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-channel-NA_TMO.conf \
+    vendor/motorola/channel/proprietary/vendor/etc/thermal-engine-channel.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine-channel.conf \
+    vendor/motorola/channel/proprietary/vendor/etc/thermal-engine.conf:$(TARGET_COPY_OUT_VENDOR)/etc/thermal-engine.conf \
     vendor/motorola/channel/proprietary/vendor/firmware/aw8624_haptic.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw8624_haptic.bin \
     vendor/motorola/channel/proprietary/vendor/firmware/aw8624_rtp.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/aw8624_rtp.bin \
     vendor/motorola/channel/proprietary/vendor/firmware/cpp_firmware_v1_10_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_10_0.fw \
@@ -32,9 +40,13 @@ PRODUCT_COPY_FILES += \
     vendor/motorola/channel/proprietary/vendor/firmware/cpp_firmware_v1_8_0.fw:$(TARGET_COPY_OUT_VENDOR)/firmware/cpp_firmware_v1_8_0.fw \
     vendor/motorola/channel/proprietary/vendor/firmware/ilitek-dsbj-ILI9881-0B-6C-channel.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/ilitek-dsbj-ILI9881-0B-6C-channel.bin \
     vendor/motorola/channel/proprietary/vendor/firmware/novatek_ts-djn-NT36525-181116-08-channel.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts-djn-NT36525-181116-08-channel.bin \
-    vendor/motorola/channel/proprietary/vendor/firmware/novatek_ts-djn-NT36525B-190103-146-channel.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts-djn-NT36525B-190103-146-channel.bin
+    vendor/motorola/channel/proprietary/vendor/firmware/novatek_ts-djn-NT36525B-190103-146-channel.bin:$(TARGET_COPY_OUT_VENDOR)/firmware/novatek_ts-djn-NT36525B-190103-146-channel.bin \
+    vendor/motorola/channel/proprietary/vendor/usr/idc/uinput-fpc.idc:$(TARGET_COPY_OUT_VENDOR)/usr/idc/uinput-fpc.idc \
+    vendor/motorola/channel/proprietary/vendor/usr/keylayout/uinput-fpc.kl:$(TARGET_COPY_OUT_VENDOR)/usr/keylayout/uinput-fpc.kl
 
 PRODUCT_PACKAGES += \
+    libmmcamera_faceproc_system \
+    libmmcamera_faceproc2_system \
     sensors.ssc \
     com.fingerprints.extension@1.0 \
     audio.primary.msm8953-moto \
@@ -45,6 +57,25 @@ PRODUCT_PACKAGES += \
     libactuator_lc898217xh \
     libadm \
     libcdsprpc \
+    libchromatix_mot_ov12a10_common \
+    libchromatix_mot_ov12a10_cpp_hfr_120 \
+    libchromatix_mot_ov12a10_cpp_hfr_60 \
+    libchromatix_mot_ov12a10_cpp_liveshot \
+    libchromatix_mot_ov12a10_cpp_preview \
+    libchromatix_mot_ov12a10_cpp_snapshot \
+    libchromatix_mot_ov12a10_cpp_snapshot_custom \
+    libchromatix_mot_ov12a10_cpp_snapshot_downscale \
+    libchromatix_mot_ov12a10_cpp_video \
+    libchromatix_mot_ov12a10_default_video \
+    libchromatix_mot_ov12a10_hfr_120 \
+    libchromatix_mot_ov12a10_hfr_120_3a \
+    libchromatix_mot_ov12a10_hfr_60 \
+    libchromatix_mot_ov12a10_hfr_60_3a \
+    libchromatix_mot_ov12a10_postproc \
+    libchromatix_mot_ov12a10_preview \
+    libchromatix_mot_ov12a10_snapshot \
+    libchromatix_mot_ov12a10_zsl_preview_3a \
+    libchromatix_mot_ov12a10_zsl_video_3a \
     libchromatix_mot_s5k3l6_common \
     libchromatix_mot_s5k3l6_cpp_hfr_120 \
     libchromatix_mot_s5k3l6_cpp_hfr_60 \
@@ -62,6 +93,57 @@ PRODUCT_PACKAGES += \
     libchromatix_mot_s5k3l6_video_full \
     libchromatix_mot_s5k3l6_zsl_preview_3a \
     libchromatix_mot_s5k3l6_zsl_video_3a \
+    libchromatix_mot_s5k4h7_common \
+    libchromatix_mot_s5k4h7_cpp_hfr_120 \
+    libchromatix_mot_s5k4h7_cpp_liveshot \
+    libchromatix_mot_s5k4h7_cpp_preview \
+    libchromatix_mot_s5k4h7_cpp_snapshot \
+    libchromatix_mot_s5k4h7_cpp_snapshot_custom \
+    libchromatix_mot_s5k4h7_cpp_video_full \
+    libchromatix_mot_s5k4h7_hfr_120 \
+    libchromatix_mot_s5k4h7_hfr_120_3a \
+    libchromatix_mot_s5k4h7_postproc \
+    libchromatix_mot_s5k4h7_snapshot \
+    libchromatix_mot_s5k4h7_video_full \
+    libchromatix_mot_s5k4h7_zsl_preview_3a \
+    libchromatix_mot_s5k4h7_zsl_video_3a \
+    libchromatix_mot_s5k5e9_common \
+    libchromatix_mot_s5k5e9_cpp_hfr_120 \
+    libchromatix_mot_s5k5e9_cpp_hfr_60 \
+    libchromatix_mot_s5k5e9_cpp_liveshot \
+    libchromatix_mot_s5k5e9_cpp_preview \
+    libchromatix_mot_s5k5e9_cpp_snapshot \
+    libchromatix_mot_s5k5e9_cpp_snapshot_custom \
+    libchromatix_mot_s5k5e9_cpp_snapshot_downscale \
+    libchromatix_mot_s5k5e9_cpp_video_full \
+    libchromatix_mot_s5k5e9_hfr_120 \
+    libchromatix_mot_s5k5e9_hfr_120_3a \
+    libchromatix_mot_s5k5e9_hfr_60 \
+    libchromatix_mot_s5k5e9_hfr_60_3a \
+    libchromatix_mot_s5k5e9_postproc \
+    libchromatix_mot_s5k5e9_snapshot \
+    libchromatix_mot_s5k5e9_video_full \
+    libchromatix_mot_s5k5e9_zsl_preview_3a \
+    libchromatix_mot_s5k5e9_zsl_video_3a \
+    libchromatix_ov12a10_ocean_common \
+    libchromatix_ov12a10_ocean_cpp_hfr_120 \
+    libchromatix_ov12a10_ocean_cpp_hfr_60 \
+    libchromatix_ov12a10_ocean_cpp_liveshot \
+    libchromatix_ov12a10_ocean_cpp_preview \
+    libchromatix_ov12a10_ocean_cpp_snapshot \
+    libchromatix_ov12a10_ocean_cpp_snapshot_custom \
+    libchromatix_ov12a10_ocean_cpp_snapshot_downscale \
+    libchromatix_ov12a10_ocean_cpp_video \
+    libchromatix_ov12a10_ocean_default_video \
+    libchromatix_ov12a10_ocean_hfr_120 \
+    libchromatix_ov12a10_ocean_hfr_120_3a \
+    libchromatix_ov12a10_ocean_hfr_60 \
+    libchromatix_ov12a10_ocean_hfr_60_3a \
+    libchromatix_ov12a10_ocean_postproc \
+    libchromatix_ov12a10_ocean_preview \
+    libchromatix_ov12a10_ocean_snapshot \
+    libchromatix_ov12a10_ocean_zsl_preview_3a \
+    libchromatix_ov12a10_ocean_zsl_video_3a \
     libchromatix_s5k4h7_channel_common \
     libchromatix_s5k4h7_channel_cpp_hfr_120 \
     libchromatix_s5k4h7_channel_cpp_liveshot \
@@ -76,6 +158,20 @@ PRODUCT_PACKAGES += \
     libchromatix_s5k4h7_channel_video_full \
     libchromatix_s5k4h7_channel_zsl_preview_3a \
     libchromatix_s5k4h7_channel_zsl_video_3a \
+    libchromatix_s5k4h7_ocean_common \
+    libchromatix_s5k4h7_ocean_cpp_hfr_120 \
+    libchromatix_s5k4h7_ocean_cpp_liveshot \
+    libchromatix_s5k4h7_ocean_cpp_preview \
+    libchromatix_s5k4h7_ocean_cpp_snapshot \
+    libchromatix_s5k4h7_ocean_cpp_snapshot_custom \
+    libchromatix_s5k4h7_ocean_cpp_video_full \
+    libchromatix_s5k4h7_ocean_hfr_120 \
+    libchromatix_s5k4h7_ocean_hfr_120_3a \
+    libchromatix_s5k4h7_ocean_postproc \
+    libchromatix_s5k4h7_ocean_snapshot \
+    libchromatix_s5k4h7_ocean_video_full \
+    libchromatix_s5k4h7_ocean_zsl_preview_3a \
+    libchromatix_s5k4h7_ocean_zsl_video_3a \
     libdepthmapwrapper \
     libflash_pmic \
     libgralloc1 \
@@ -149,7 +245,11 @@ PRODUCT_PACKAGES += \
     libmmcamera_mot_dw9763_eeprom \
     libmmcamera_mot_dw9767_eeprom \
     libmmcamera_mot_gt24p64b_eeprom \
+    libmmcamera_mot_ov12a10 \
+    libmmcamera_mot_ov12a10_eeprom \
     libmmcamera_mot_s5k3l6 \
+    libmmcamera_mot_s5k5e9 \
+    libmmcamera_mot_s5k5e9_eeprom \
     libmmcamera_paaf_lib \
     libmmcamera_pdaf \
     libmmcamera_pdafcamif \
@@ -190,6 +290,5 @@ PRODUCT_PACKAGES += \
     capi_v2_smartAmp_TAS25xx.so \
     tas2560_TI_0 \
     tas2560_TI_1 \
-    MotCamera2 \
     charge_only_mode \
     android.hardware.biometrics.fingerprint@2.1-fpcservice
